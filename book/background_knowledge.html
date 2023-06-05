@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Background Knowledge - Neorg Notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="My personal notes on the Neorg framework for Neovim.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="disclaimer.html">Disclaimer</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">1.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basic_installation.html"><strong aria-hidden="true">2.1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="installation_docker.html"><strong aria-hidden="true">2.2.</strong> Docker</a></li><li class="chapter-item expanded "><a href="installation_nix.html"><strong aria-hidden="true">2.3.</strong> Nix (best option)</a></li></ol></li><li class="chapter-item expanded "><a href="norg_files.html"><strong aria-hidden="true">3.</strong> Norg Files</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">4.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config_examples.html"><strong aria-hidden="true">4.1.</strong> Config Examples</a></li></ol></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">6.</strong> Ecosystem Overview</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">7.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="active_projects.html"><strong aria-hidden="true">8.</strong> Active Projects</a></li><li class="chapter-item expanded "><a href="project_ideas.html"><strong aria-hidden="true">9.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">10.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">11.</strong> Helpful Resources and Links</a></li><li class="chapter-item expanded "><a href="background_knowledge.html" class="active"><strong aria-hidden="true">12.</strong> Background Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rosetta_code.html"><strong aria-hidden="true">12.1.</strong> Rosetta Code Selection</a></li></ol></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">13.</strong> Comparison with Similar Projects</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Neorg Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/yelircaasi/neorg-notes/tree/master" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/yelircaasi/neorg-notes/tree/master/src/background_knowledge.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="background-knowledge"><a class="header" href="#background-knowledge">Background Knowledge</a></h1>
+<p>This covers some of what I would consider useful to know when working with Neorg &amp; co.
+Most of the sections are in the form of 'learning roadmaps' - some key readings to get up to speed, sometimes also activities or questions to guide one's acquisition of the material.</p>
+<h2 id="markdown"><a class="header" href="#markdown">Markdown</a></h2>
+<ol>
+<li><a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a></li>
+<li><a href="https://www.markdowntutorial.com">Markdown Tutorial</a></li>
+<li><a href="https://learnxinyminutes.com/docs/markdown/">Learn Markdown in Y Minutes</a> - available in many different languages <a href="https://learnxinyminutes.com/">here</a></li>
+<li>the official documentation, as needed
+<ol>
+<li><a href="https://daringfireball.net/projects/markdown/basics">Basics</a></li>
+<li><a href="https://daringfireball.net/projects/markdown/syntax">Syntax</a></li>
+<li><a href="https://daringfireball.net/projects/markdown/dingus">Online Markdown-to-HTML Converter, Cheatsheet</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="emacs-orgmode"><a class="header" href="#emacs-orgmode">emacs orgmode</a></h2>
+<ol>
+<li><a href="https://orgmode.org/worg/org-tutorials/org4beginners.html">Org mode beginning at the basics</a></li>
+<li><a href="https://orgmode.org/orgguide.html">Org Mode Compact Guide</a> - reading Emacs Lisp isn't too bad if you have had any exposure to a lisp-family language before, and if not, <a href="https://learnxinyminutes.com/docs/elisp/">this</a> will will help you make sense of it</li>
+<li><a href="https://orgmode.org/worg/org-syntax.html">.org File Syntax Specification</a></li>
+</ol>
+<h2 id="neovim"><a class="header" href="#neovim">Neovim</a></h2>
+<h3 id="general"><a class="header" href="#general">General</a></h3>
+<p><strong>WIP</strong></p>
+<h3 id="plugins"><a class="header" href="#plugins">Plugins</a></h3>
+<p><strong>WIP</strong></p>
+<h3 id="treesitter"><a class="header" href="#treesitter"><a href="https://tree-sitter.github.io/tree-sitter/">Treesitter</a></a></h3>
+<p><a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a></p>
+<p><strong>WIP</strong></p>
+<h2 id="programming-languages"><a class="header" href="#programming-languages">Programming Languages</a></h2>
+<h3 id="multilinugual"><a class="header" href="#multilinugual">Multilinugual</a></h3>
+<p><a href="./rosetta_code.html">Good selection of problems from Rosetta Code</a></p>
+<h3 id="lua"><a class="header" href="#lua">Lua</a></h3>
+<ol>
+<li><a href="https://web.archive.org/web/20150219224654/http://blog.datamules.com/blog/2012/01/30/why-lua/">Why Lua?</a></li>
+<li><a href="https://www.lua.org/doc/cacm2018.pdf">A Look at the Design of Lua</a></li>
+<li><a href="https://hyperpolyglot.org/more">Hyperpolyglot</a> - comparison with other scripting languages, see <a href="https://hyperpolyglot.org/scripting">here</a> for the same examples in 4 more languages</li>
+<li><a href="https://learnxinyminutes.com/docs/lua/">Learn Lua in Y Minutes</a></li>
+<li><a href="https://github.com/nanotee/nvim-lua-guide">nvim Lua guide</a> - excellent tutorial</li>
+</ol>
+<h3 id="janet"><a class="header" href="#janet">Janet</a></h3>
+<ol>
+<li><a href="https://learnxinyminutes.com/docs/janet/">Learn Janet in Y Minutes</a></li>
+<li><a href="https://janet-lang.org/1.26.0/index.html">Official Site</a> - read the main page and skim the documentation</li>
+<li><a href="https://janetdocs.com/">Community Docs</a> - browse and search examples</li>
+</ol>
+<h3 id="scheme"><a class="header" href="#scheme">Scheme</a></h3>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=Dn4K631ftW8">Scheme is Fun</a> - quick video on Scheme syntax</li>
+<li><a href="https://www.scheme.com/tspl3/intro.html">decent short intro</a></li>
+<li><a href="https://www.cs.utexas.edu/ftp/garbage/cs345/schintro-v14/schintro_toc.html">longer intro</a></li>
+<li><a href="https://learnxinyminutes.com/docs/racket/">Learn Racket in Y Minutes</a> - Racket is closely related to Scheme, so this is a good way to get a feel for the language - just don't memorize all the the details here; focus on generalities</li>
+<li><a href="https://www.youtube.com/watch?v=byofGyW2L10&amp;list=PLgyU3jNA6VjRMB-LXXR9ZWcU3-GCzJPm0">nice little video course</a></li>
+<li><a href="https://docs.scheme.org/guide/">Official Guide</a> - very well-written and worth reading - not too long</li>
+<li><a href="https://cookbook.scheme.org/">Cookbook</a> - one of the better ways to get a feel for the language</li>
+<li><a href="https://docs.scheme.org/tyscheme/">Teach Yourself Scheme in Fixnum Days</a> - probably more than is needed for the small amount of Scheme used in Neorg, but well-written and worth leafing through</li>
+</ol>
+<h3 id="zig"><a class="header" href="#zig">Zig</a></h3>
+<ol start="0">
+<li><a href="https://ziglang.org/learn/why_zig_rust_d_cpp/">Why Zig When There is Already C++, D, and Rust?</a> - to get motivated</li>
+<li><a href="https://ziglearn.org/">ziglearn.org</a></li>
+<li><a href="https://learnxinyminutes.com/docs/zig/">Learn Zig in Y Minutes</a></li>
+<li><a href="https://ziglang.org/learn/overview/">In-depth Overview</a> - really nice read</li>
+<li><a href="https://ziglang.org/documentation/0.10.1/">Zig Docs</a> - worth skimming</li>
+<li><a href="https://ziglang.org/learn/samples/">Examples</a> - to get a practical feel for the language</li>
+</ol>
+<h3 id="rust"><a class="header" href="#rust">Rust</a></h3>
+<ol>
+<li><a href="https://learnxinyminutes.com/docs/rust/">Learn Rust in Y Minutes</a></li>
+<li><a href="https://hyperpolyglot.org/rust">Hyperpolyglot</a></li>
+<li><a href="https://doc.rust-lang.org/book/index.html">The Rust Programming Language</a> - the Bible of Rust, worth at least skimming</li>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/">Rust by Example</a> - my preferred way to learn, especially when a language is new to me</li>
+<li><a href="https://rust-lang-nursery.github.io/rust-cookbook/">The Rust Cookbook</a> - another nice format, and the third member of the Holy Trinity of Rust books</li>
+</ol>
+<h3 id="haskell"><a class="header" href="#haskell">Haskell</a></h3>
+<ol>
+<li><a href="https://learnxinyminutes.com/docs/haskell/">Learn Haskell in Y Minutes</a> - worth going through for exposure to Haskell syntax</li>
+<li><a href="https://hyperpolyglot.org/ml">Hyperpolyglot</a> - good examples of  basic tasks, even if the other 3 languages are unfamiliar</li>
+<li><a href="http://learnyouahaskell.com/chapters">Learn You a Haskell for Great Good</a> - a classic</li>
+<li><a href="http://www.happylearnhaskelltutorial.com/contents.html">Happy Learn Haskell Tutorial</a> -  another highly recommended resource</li>
+<li><a href="https://book.realworldhaskell.org/read/">Real-World Haskell</a> - worth going through to solidify what has already been learned and to go from theory to practice</li>
+</ol>
+<h3 id="dart--flutter"><a class="header" href="#dart--flutter">Dart (→ Flutter)</a></h3>
+<ol>
+<li><a href="https://www.freecodecamp.org/news/https-medium-com-rahman-sameeha-whats-flutter-an-intro-to-dart-6fc42ba7c4a3/">FreeCodeCamp</a> - very basic</li>
+<li><a href="https://blog.logrocket.com/introduction-to-using-dart-in-flutter/">Another quick 1-page intro</a></li>
+</ol>
+<h2 id="gtd-framework"><a class="header" href="#gtd-framework">GTD Framework</a></h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Getting_Things_Done">Wikipedia</a> - good concise overview</li>
+<li><a href="https://gettingthingsdone.com/what-is-gtd/">Official site - 5 Steps</a></li>
+<li><a href="https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html">a GTD implementation in Orgmode</a></li>
+<li><a href="https://taskwarrior.org/news/news.20150627/">GTD in Taskwarrior</a> - interesting tutorial series</li>
+</ol>
+<h2 id="zettelkasten-system"><a class="header" href="#zettelkasten-system">Zettelkasten System</a></h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Zettelkasten">Wikipedia</a> - as always, Wikipedia has an excellent introduction</li>
+<li><a href="https://www.sloww.co/zettelkasten/">Zettelkasten 101</a> (good blog post)</li>
+</ol>
+<h2 id="parsing-and-formal-language-theory"><a class="header" href="#parsing-and-formal-language-theory">Parsing and Formal Language Theory</a></h2>
+<ol>
+<li><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=b1fb38f18146e2bbb454272b88bdff0b98a88d6a">James Power Notes</a> - impressively concise and readable</li>
+</ol>
+<h2 id="wip-read-through-and-sort"><a class="header" href="#wip-read-through-and-sort"><strong>WIP</strong>: Read through and sort</a></h2>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=33594264">Great discussion of productivity</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="helpful_resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="rosetta_code.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="helpful_resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="rosetta_code.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_line_numbers = true;
+        </script>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js"></script>
+        <script src="editor.js"></script>
+        <script src="mode-rust.js"></script>
+        <script src="theme-dawn.js"></script>
+        <script src="theme-tomorrow_night.js"></script>
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

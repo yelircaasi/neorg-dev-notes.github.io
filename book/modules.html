@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">2.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">3.</strong> Installation</a></li><li class="chapter-item expanded "><a href="norg_syntax.html"><strong aria-hidden="true">4.</strong> Norg Syntax</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">5.</strong> Usage</a></li><li class="chapter-item expanded "><a href="modules.html" class="active"><strong aria-hidden="true">6.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">7.</strong> Ecosystem</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">8.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">9.</strong> Helpful Resources</a></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">10.</strong> Comparison with Similar Projects</a></li><li class="chapter-item expanded "><a href="other_links.html"><strong aria-hidden="true">11.</strong> Other Links</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="disclaimer.html">Disclaimer</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">1.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basic_installation.html"><strong aria-hidden="true">2.1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="installation_docker.html"><strong aria-hidden="true">2.2.</strong> Docker</a></li><li class="chapter-item expanded "><a href="installation_nix.html"><strong aria-hidden="true">2.3.</strong> Nix (best option)</a></li></ol></li><li class="chapter-item expanded "><a href="norg_files.html"><strong aria-hidden="true">3.</strong> Norg Files</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">4.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config_examples.html"><strong aria-hidden="true">4.1.</strong> Config Examples</a></li></ol></li><li class="chapter-item expanded "><a href="modules.html" class="active"><strong aria-hidden="true">5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">6.</strong> Ecosystem Overview</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">7.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="active_projects.html"><strong aria-hidden="true">8.</strong> Active Projects</a></li><li class="chapter-item expanded "><a href="project_ideas.html"><strong aria-hidden="true">9.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">10.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">11.</strong> Helpful Resources and Links</a></li><li class="chapter-item expanded "><a href="background_knowledge.html"><strong aria-hidden="true">12.</strong> Background Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rosetta_code.html"><strong aria-hidden="true">12.1.</strong> Rosetta Code Selection</a></li></ol></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">13.</strong> Comparison with Similar Projects</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,12 +152,39 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="modules"><a class="header" href="#modules">Modules</a></h1>
+<p>The <a href="https://github.com/nvim-neorg/neorg/wiki">wiki</a> already has good documentation of the built-in modules. This page will be mostly for my own notes on the modules - insights, questions answered, thoughts, and so on.</p>
+<h2 id="tutorial-on-making-modules"><a class="header" href="#tutorial-on-making-modules">Tutorial on making modules</a></h2>
+<p><a href="https://github.com/andreadev-it/neorg-module-tutorials/blob/main/introduction.md">Tutorial</a> on making modules, with accompanying <a href="https://www.youtube.com/playlist?list=PLxpY86LRR3B0rtOBjXAsq1XnsOt4m4owu">videos</a>:</p>
+<ul>
+<li>Extending Neorg - Your first module
+<ul>
+<li><a href="https://www.youtube.com/watch?v=j4lTvIGRhmw&amp;list=PLxpY86LRR3B0rtOBjXAsq1XnsOt4m4owu&amp;index=1&amp;t=166s&amp;pp=iAQB">video</a></li>
+<li><a href="https://github.com/andreadev-it/neorg-module-tutorials/blob/main/introduction.md">.md</a></li>
+</ul>
+</li>
+<li>Extending Neorg - Module configuration and overview
+<ul>
+<li><a href="https://www.youtube.com/watch?v=F64TD4nl7J8&amp;list=PLxpY86LRR3B0rtOBjXAsq1XnsOt4m4owu&amp;index=2&amp;pp=iAQB">video</a></li>
+<li><a href="https://github.com/andreadev-it/neorg-module-tutorials/blob/main/part-2.md">.md</a></li>
+</ul>
+</li>
+<li>Extending Neorg - A treesitter-powered module
+<ul>
+<li><a href="https://www.youtube.com/watch?v=E1Wp4YMEmyA&amp;list=PLxpY86LRR3B0rtOBjXAsq1XnsOt4m4owu&amp;index=3&amp;pp=iAQB">video</a></li>
+<li><a href="https://github.com/andreadev-it/neorg-module-tutorials/blob/main/part-3.md">.md</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="example-of-a-3rd-party-module"><a class="header" href="#example-of-a-3rd-party-module">Example of a 3rd-party module</a></h2>
+<p><a href="https://github.com/nvim-neorg/neorg-telescope">neorg-telescope</a></p>
+<p><strong>WIP</strong>: find examples on configs using this</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="usage.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="config_examples.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -171,7 +198,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="usage.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="config_examples.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
@@ -182,22 +209,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>

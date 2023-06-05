@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="project_description.html" class="active"><strong aria-hidden="true">2.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">3.</strong> Installation</a></li><li class="chapter-item expanded "><a href="norg_syntax.html"><strong aria-hidden="true">4.</strong> Norg Syntax</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">5.</strong> Usage</a></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">6.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">7.</strong> Ecosystem</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">8.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">9.</strong> Helpful Resources</a></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">10.</strong> Comparison with Similar Projects</a></li><li class="chapter-item expanded "><a href="other_links.html"><strong aria-hidden="true">11.</strong> Other Links</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="disclaimer.html">Disclaimer</a></li><li class="chapter-item expanded "><a href="project_description.html" class="active"><strong aria-hidden="true">1.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basic_installation.html"><strong aria-hidden="true">2.1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="installation_docker.html"><strong aria-hidden="true">2.2.</strong> Docker</a></li><li class="chapter-item expanded "><a href="installation_nix.html"><strong aria-hidden="true">2.3.</strong> Nix (best option)</a></li></ol></li><li class="chapter-item expanded "><a href="norg_files.html"><strong aria-hidden="true">3.</strong> Norg Files</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">4.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config_examples.html"><strong aria-hidden="true">4.1.</strong> Config Examples</a></li></ol></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">6.</strong> Ecosystem Overview</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">7.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="active_projects.html"><strong aria-hidden="true">8.</strong> Active Projects</a></li><li class="chapter-item expanded "><a href="project_ideas.html"><strong aria-hidden="true">9.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">10.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">11.</strong> Helpful Resources and Links</a></li><li class="chapter-item expanded "><a href="background_knowledge.html"><strong aria-hidden="true">12.</strong> Background Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rosetta_code.html"><strong aria-hidden="true">12.1.</strong> Rosetta Code Selection</a></li></ol></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">13.</strong> Comparison with Similar Projects</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,12 +152,25 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="project-description"><a class="header" href="#project-description">Project Description</a></h1>
+<p>From the official README:</p>
+<blockquote>
+<p>Neorg (Neo - new, org - organization) is a Neovim plugin designed to reimagine organization as you know it. Grab some coffee, start writing some notes, let your editor handle the rest.</p>
+<p>What is Neorg?</p>
+<p>Neorg is an all-encompassing tool based around structured note taking, project and task management, time tracking, slideshows, writing typeset documents and much more. The premise is that all of these features are built on top of a single base file format (.norg), which the user only has to learn once to gain access to all of Neorg's functionality.</p>
+<p>Not only does this yield a low barrier for entry for new users it also ensures that all features are integrated with each other and speak the same underlying language. The file format is built to be expressive and easy to parse, which also makes .norg files easily usable anywhere outside of Neorg itself.</p>
+</blockquote>
+<p>Neorg is a plugin to extend the functionality of the Neovim editor, but the scope of the project is considerably wider. It defines a new file format, <code>.norg</code> and extensions are currently in the works to support databases, syncing, mobile, and more.</p>
+<p>In the words on mrossinek:</p>
+<blockquote>
+<p>Neorg is a life organization tool for Neovim. It implements its own plain-text format improving upon others such as markdown and org-mode by leveraging the full power of Treesitter and combined with Lua revolutionizes note taking in Neovim.</p>
+</blockquote>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="disclaimer.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -171,7 +184,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="disclaimer.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
@@ -182,22 +195,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>

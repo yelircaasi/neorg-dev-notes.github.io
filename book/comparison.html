@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">2.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">3.</strong> Installation</a></li><li class="chapter-item expanded "><a href="norg_syntax.html"><strong aria-hidden="true">4.</strong> Norg Syntax</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">5.</strong> Usage</a></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">6.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">7.</strong> Ecosystem</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">8.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">9.</strong> Helpful Resources</a></li><li class="chapter-item expanded "><a href="comparison.html" class="active"><strong aria-hidden="true">10.</strong> Comparison with Similar Projects</a></li><li class="chapter-item expanded "><a href="other_links.html"><strong aria-hidden="true">11.</strong> Other Links</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="disclaimer.html">Disclaimer</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">1.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basic_installation.html"><strong aria-hidden="true">2.1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="installation_docker.html"><strong aria-hidden="true">2.2.</strong> Docker</a></li><li class="chapter-item expanded "><a href="installation_nix.html"><strong aria-hidden="true">2.3.</strong> Nix (best option)</a></li></ol></li><li class="chapter-item expanded "><a href="norg_files.html"><strong aria-hidden="true">3.</strong> Norg Files</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">4.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config_examples.html"><strong aria-hidden="true">4.1.</strong> Config Examples</a></li></ol></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">6.</strong> Ecosystem Overview</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">7.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="active_projects.html"><strong aria-hidden="true">8.</strong> Active Projects</a></li><li class="chapter-item expanded "><a href="project_ideas.html"><strong aria-hidden="true">9.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">10.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">11.</strong> Helpful Resources and Links</a></li><li class="chapter-item expanded "><a href="background_knowledge.html"><strong aria-hidden="true">12.</strong> Background Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rosetta_code.html"><strong aria-hidden="true">12.1.</strong> Rosetta Code Selection</a></li></ol></li><li class="chapter-item expanded "><a href="comparison.html" class="active"><strong aria-hidden="true">13.</strong> Comparison with Similar Projects</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,18 +152,69 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="comparison-with-similar-projects"><a class="header" href="#comparison-with-similar-projects">Comparison with Similar Projects</a></h1>
+<h2 id="markdown"><a class="header" href="#markdown"><a href="https://www.markdownguide.org/">Markdown</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="emacs-orgmode"><a class="header" href="#emacs-orgmode"><a href="https://orgmode.org/">emacs orgmode</a></a></h2>
+<p>The OG superuser everything-in-one plugin for the OG superuser everything-in-one editor (i.e. operating system).</p>
+<p>Mature Ecosystem, most notably:</p>
+<ul>
+<li><a href="https://plainorg.com">plainorg</a></li>
+<li><a href="https://flathabits.com">flathabits</a></li>
+<li><a href="https://beorg.app">beorg</a></li>
+<li><a href="https://braintool.org">braintool</a></li>
+<li><a href="https://easyorgmode.com">easyorgmode</a></li>
+<li><a href="https://logseq.com">logseq</a></li>
+<li><a href="https://organice.200ok.ch">organice</a></li>
+<li><a href="https://orgro.org">orgro</a></li>
+<li><a href="http://orgzly.com">orgzly</a></li>
+</ul>
+<p><strong>WIP</strong></p>
+<h2 id="obsidian"><a class="header" href="#obsidian"><a href="https://obsidian.md/">Obsidian</a></a></h2>
+<p>Verdict: A beautiful and very useful product whose main flaw is not being open-source. Has a powerful ecosystem and good design, and is built around markdown.</p>
+<h2 id="joplin"><a class="header" href="#joplin"><a href="https://joplinapp.org/">Joplin</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="mindnvim"><a class="header" href="#mindnvim"><a href="https://github.com/phaazon/mind.nvim">mind.nvim</a></a></h2>
+<p>Notable features</p>
+<ul>
+<li>tree-based</li>
+<li>pure lua (nvim plugin)</li>
+<li>designed to support a variety of workflows, such as journaling, note-taking, personal wiki, task management</li>
+</ul>
+<blockquote>
+<p>... an organizer tool for Neovim. It can be used to accomplish and implement a wide variety of workflows. It is designed to quickly add items in trees. Why a tree? Well, list of things like <strong>WIP</strong> lists are great but they lack the organization part. Most of them can be gathered in “lists of lists” — you probably have that on your phone. A list of list is basically a tree. But editing and operating a list of list is annoying, so it’s better to have a tool that has the concept of a node and a tree as a primitive.</p>
+</blockquote>
+<p>Status: Archived by the owner in favor of work on a more cross-application tool: &quot;I decided that having so many great features in a single editor is not the right way to write software, and I wanted to do something different outside of Neovim.&quot;</p>
+<p>Verdict: Well-designed and impressive tool whose only major flaw is having been abandoned. Neorg should be able to do everything that </p>
+<h2 id="quarto-nvim"><a class="header" href="#quarto-nvim"><a href="https://github.com/quarto-dev/quarto-nvim">quarto-nvim</a></a></h2>
+<p>→ <a href="https://quarto.org/">Quarto</a></p>
+<p><a href="https://quarto.org/docs/tools/neovim.html">Quarto Neovim Docs</a></p>
+<p><strong>WIP</strong></p>
+<h2 id="taskwarrior"><a class="header" href="#taskwarrior"><a href="https://taskwarrior.org/">Taskwarrior</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="vim-orgmode"><a class="header" href="#vim-orgmode"><a href="https://github.com/jceb/vim-orgmode">vim-orgmode</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="orgmodenvim"><a class="header" href="#orgmodenvim"><a href="https://github.com/nvim-orgmode/orgmode">orgmode.nvim</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="zk-nvim"><a class="header" href="#zk-nvim"><a href="https://github.com/mickael-menu/zk-nvim">zk-nvim</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="telekastennvim"><a class="header" href="#telekastennvim"><a href="https://github.com/renerocksai/telekasten.nvim">telekasten.nvim</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="taskwiki"><a class="header" href="#taskwiki"><a href="https://github.com/tools-life/taskwiki">taskwiki</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="vimwiki"><a class="header" href="#vimwiki"><a href="https://github.com/vimwiki/vimwiki">vimwiki</a></a></h2>
+<p><strong>WIP</strong></p>
+<h2 id="mkdnflwnvim"><a class="header" href="#mkdnflwnvim"><a href="https://github.com/jakewvincent/mkdnflow.nvim">mkdnflw.nvim</a></a></h2>
+<p><strong>WIP</strong></p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="helpful_resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="rosetta_code.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="other_links.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -171,33 +222,14 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="helpful_resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="rosetta_code.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="other_links.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>
