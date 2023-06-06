@@ -102,8 +102,7 @@ Note: this is not a comprehensive list by any means, and I do not wish to offend
 
   * [r/hackernews: Neorg: Neovim 0.5’s answer to modern life organization](https://www.reddit.com/r/hackernews/comments/oiim0l/neorg_neovim_05s_answer_to_modern_life/)
 
-  * [Note-taking system](Second Brain implementation in neovim)
-(https://www.reddit.com/r/neovim/comments/130let9/notetaking_system_second_brain_implementation_in/)
+  * [Note-taking system (Second Brain implementation in neovim)](https://www.reddit.com/r/neovim/comments/130let9/notetaking_system_second_brain_implementation_in/)
 
   * [r/patient_hackernews: Neorg: Neovim 0.5’s answer to modern life organization](https://www.reddit.com/r/patient_hackernews/comments/oij5v8/neorg_neovim_05s_answer_to_modern_life/)
 
