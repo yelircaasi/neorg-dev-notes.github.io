@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="disclaimer.html">Disclaimer</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">1.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basic_installation.html"><strong aria-hidden="true">2.1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="installation_docker.html"><strong aria-hidden="true">2.2.</strong> Docker</a></li><li class="chapter-item expanded "><a href="installation_nix.html" class="active"><strong aria-hidden="true">2.3.</strong> Nix (best option)</a></li></ol></li><li class="chapter-item expanded "><a href="norg_files.html"><strong aria-hidden="true">3.</strong> Norg Files</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">4.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config_examples.html"><strong aria-hidden="true">4.1.</strong> Config Examples</a></li></ol></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">6.</strong> Ecosystem Overview</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">7.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="active_projects.html"><strong aria-hidden="true">8.</strong> Active Projects</a></li><li class="chapter-item expanded "><a href="project_ideas.html"><strong aria-hidden="true">9.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">10.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">11.</strong> Helpful Resources and Links</a></li><li class="chapter-item expanded "><a href="background_knowledge.html"><strong aria-hidden="true">12.</strong> Background Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rosetta_code.html"><strong aria-hidden="true">12.1.</strong> Rosetta Code Selection</a></li></ol></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">13.</strong> Comparison with Similar Projects</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="project_description.html"><strong aria-hidden="true">1.</strong> Project Description</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basic_installation.html"><strong aria-hidden="true">2.1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="installation_docker.html"><strong aria-hidden="true">2.2.</strong> Docker</a></li><li class="chapter-item expanded "><a href="installation_nix.html" class="active"><strong aria-hidden="true">2.3.</strong> Nix (best option)</a></li></ol></li><li class="chapter-item expanded "><a href="norg_files.html"><strong aria-hidden="true">3.</strong> Norg Files</a></li><li class="chapter-item expanded "><a href="usage.html"><strong aria-hidden="true">4.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config_examples.html"><strong aria-hidden="true">4.1.</strong> Config Examples</a></li></ol></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ecosystem.html"><strong aria-hidden="true">6.</strong> Ecosystem Overview</a></li><li class="chapter-item expanded "><a href="roadmaps.html"><strong aria-hidden="true">7.</strong> Roadmaps</a></li><li class="chapter-item expanded "><a href="active_projects.html"><strong aria-hidden="true">8.</strong> Active Projects</a></li><li class="chapter-item expanded "><a href="project_ideas.html"><strong aria-hidden="true">9.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">10.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="helpful_resources.html"><strong aria-hidden="true">11.</strong> Helpful Resources and Links</a></li><li class="chapter-item expanded "><a href="background_knowledge.html"><strong aria-hidden="true">12.</strong> Background Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rosetta_code.html"><strong aria-hidden="true">12.1.</strong> Rosetta Code Selection</a></li></ol></li><li class="chapter-item expanded "><a href="comparison.html"><strong aria-hidden="true">13.</strong> Comparison with Similar Projects</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -185,6 +185,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
         <script>
